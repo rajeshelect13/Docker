@@ -1,2 +1,3 @@
-From tomcat:
-COPY /var/lib/jenkins/workspace/docker-pipeline/Helloword.html /usr/local/tomcat/webapps/Helloword.html
+From httpd:2.4
+# copy file from jenkins deploy folder to container  image httpd folder.
+COPY /var/lib/jenkins/workspace/docker-pipeline/ /usr/local/apache2/htdocs/
