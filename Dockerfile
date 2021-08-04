@@ -8,4 +8,4 @@ FROM centos:latest
 RUN yum -y install httpd
 COPY ./Helloword.html /var/www/html/
 CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
-EXPOSE 80
+#EXPOSE 80
