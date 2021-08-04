@@ -10,3 +10,9 @@ COPY ./Helloword.html /var/www/html/
 RUN sudo systemctl restart httpd
 #CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 #EXPOSE 80
+FROM centos
+RUN yum install httpd -y
+COPY ./Helloword.html /var/www/html/
+
+CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”]
+EXPOSE 80
