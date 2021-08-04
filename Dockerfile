@@ -5,7 +5,7 @@
 #COPY ./Helloword.html /usr/local/apache2/htdocs/
 #COPY ./Helloword.html /usr/local/tomcat/webapps/
 FROM centos:latest
-RUN sudo yum -y install httpd
+RUN sudo yum install httpd -y
 COPY ./Helloword.html /var/www/html/
 RUN sudo systemctl restart httpd
 #CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
